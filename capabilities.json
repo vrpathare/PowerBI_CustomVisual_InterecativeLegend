@@ -1,0 +1,42 @@
+{
+
+    "supportsHighlight": true,
+    "dataRoles": [
+        {
+            "displayName": "Axis",
+            "name": "category",
+            "kind": "Grouping"
+        },
+        {
+            "displayName": "Values",
+            "name": "measure",
+            "kind": "Measure"
+        }
+    ],
+    "objects": {
+        
+    },
+    "dataViewMappings": [
+        {
+            "categorical": {
+                "categories": {
+                    "for": {
+                        "in": "category"
+                    },
+                    "dataReductionAlgorithm": {
+                        "top": {}
+                    }
+                },
+                "values": {
+                    "select": [
+                        {
+                            "bind": {
+                                "to": "measure"
+                            }
+                        }
+                    ]
+                }
+            }
+        }
+    ]
+}
